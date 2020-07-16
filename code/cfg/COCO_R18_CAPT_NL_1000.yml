@@ -1,0 +1,34 @@
+CONFIG_NAME: 'COCO'
+
+DEBUG: False
+PHASE: 'train'
+CUDA: True
+
+TRAIN:
+  #for all models we set BATCH_SIZE*STEP_EVERY_X_BATCHES = 200
+  BATCH_SIZE: 200
+  STEP_EVERY_X_BATCHES: 1
+  SNAPSHOT_INTERVAL: 5
+  DISCRIMINATOR_LR: 5.e-3
+  MAX_EPOCH: 65
+  NVIDIA_DALI: True
+
+MODEL:
+  MODEL_TYPE: 'resnet18' #'resnet18', 'resnet101', 'inception_v3'
+  VOCAB_SIZE:
+    CLASS: 91
+    ENV: 300
+
+  CLASS:
+    DIM: 91
+    LABEL_ORIGIN: 'image' #image or sentence
+    TYPE_OF_CLASS: 'instances' #instances or all_in_vocab
+    BY_TAG_TYPE: False
+
+  ENVIRONMENT:
+    DIM: 1000
+    LABEL_ORIGIN: 'sentence' #image or sentence
+    TYPE_OF_CLASS:  'all_in_vocab' #instances or all_in_vocab
+    BY_TAG_TYPE: True
+    R: 100
+
