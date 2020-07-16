@@ -1,9 +1,9 @@
-##CoDiR
+## CoDiR
 
-Pytorch code to train CoDiR representations on the COCO dataset.
+Pytorch code to train CoDiR representations on the COCO dataset, see our paper "Structured (De)composable Representations Trained with Neural Networks", Spinks, Graham and Moens, Marie-Francine. ANNPR, 2020.
 
 
-##Installation 
+## Installation 
 
 Run the python code locally with the following packages installed. NVIDIA Dali is optional but speeds up training significantly.
 
@@ -17,7 +17,7 @@ Requirements:
 - tqdm
 - torch 1.0.1+
 
-##To get started
+## To get started
 
 In the cfg folder, configuration files are given to train different types of models. The preferred cfg file can be entered at the top of 'main.py' or enterred as an argument on the command line, e.g.: 
  
@@ -38,6 +38,6 @@ Here is an overview of the available config files:
 
 To check the meaning of different parameters in the config file, consult cfg/config_general.py
 
-##Dataset
+## Dataset
 
 The dataset is COCO that requires the pycocotools 2.0+ to be installed. We also provide the indices and image names in the train/validation/test set, as well as well as the vocab files required for the experiments. Place these in the CocoCaptions data folder when running the code. 
